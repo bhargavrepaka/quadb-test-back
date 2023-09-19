@@ -8,7 +8,7 @@ const port = 3000;
 
 
 
-mongoose.connect("mongodb://localhost:27017",{
+mongoose.connect("mongodb+srv://bhargavhulk:bhargavhulk@cluster0.vzqjstr.mongodb.net/",{
     dbName:"crypto-quadB"
 }).then((s)=>console.log("Database connected"))
   .catch((e)=>console.log(e))
@@ -28,7 +28,7 @@ app.get('/setData', async (req, res) => {
     res.json({success:true,message:'Data fetched and added to DB successfully'});
   } catch (error) {
     console.error(error);
-    res.status(500).json({success:false,message:'Error occurred while fetching and and added data to DB'});
+    res.status(500).json({success:false,message:error.message});
   }
 });
 
