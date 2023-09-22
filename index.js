@@ -8,7 +8,7 @@ const port = 3000;
 
 
 
-mongoose.connect("mongodb+srv://bhargavhulk:bhargavhulk@cluster0.vzqjstr.mongodb.net/",{
+mongoose.connect("mongodb+srv://bhargavhulk:<password>@cluster0.vzqjstr.mongodb.net/",{
     dbName:"crypto-quadB"
 }).then((s)=>console.log("Database connected"))
   .catch((e)=>console.log(e))
